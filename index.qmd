@@ -664,7 +664,7 @@ library(furrr)
 future_map(mtcars, mean)
 ```
 
-![](images/purrr.png){.absolute top="0" right="0"}
+![](images/furrr.png){.absolute top="0" right="0"}
 
 ::: {background-image="assets/top-right.svg" background-repeat="no-repeat" background-position="100% 0%"}
 :::
@@ -690,7 +690,7 @@ map(mtcars, mean)
 ```
 :::
 
-![](images/purrr.png){.absolute top="0" right="0"}
+![](images/furrr.png){.absolute top="0" right="0"}
 
 ::: {background-image="assets/top-right.svg" background-repeat="no-repeat" background-position="100% 0%"}
 :::
