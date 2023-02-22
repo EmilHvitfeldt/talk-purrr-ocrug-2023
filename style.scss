@@ -18,9 +18,19 @@ $selection-bg: $theme-pink;
 
 /*-- scss:rules --*/
 
+code span.fu {
+  color: #a37100;
+}
+
+.reveal code {
+  color: #a37100;
+}
+
 .mono {
   font-family: 'Source Code Pro', monospace;
 }
+
+// custom code highlighting ---------------------------------------------------
 
 // Title Theme ----------------------------------------------------------------
 
