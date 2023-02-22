@@ -854,7 +854,7 @@ $carb
 <div class="column" style="width:45%;">
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">map</span>(mtcars, mean, <span class="at">rm.na =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">map</span>(mtcars, mean, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$mpg
 [1] 20.09062
@@ -894,7 +894,7 @@ $carb
 </div><div class="column" style="width:55%;">
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">map</span>(mtcars, \(x) <span class="fu">mean</span>(x, <span class="at">rm.na =</span> <span class="cn">TRUE</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">map</span>(mtcars, \(x) <span class="fu">mean</span>(x, <span class="at">na.rm =</span> <span class="cn">TRUE</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$mpg
 [1] 20.09062
@@ -943,7 +943,7 @@ $carb
 <section id="this-feels-familiar" class="slide level2">
 <h2>This feels familiar 👀</h2>
 <p>Using a <code>map()</code> is very close similar to using a <code>for</code>-loop and <code>lapply()</code></p>
-<p>These two statements ar almost identical</p>
+<p>These two statements are almost identical</p>
 <p><br></p>
 <div class="fragment">
 <div class="columns">
@@ -2621,13 +2621,13 @@ $`Gear Samsonite 42 Tooth`$is_trans[[1]]
 </section>
 <section id="function-modifiers-1" class="slide level2">
 <h2>Function modifiers</h2>
-<p>Having models that sometimes errors are a living nightmare, using <code>safely()</code> lets to run everything and diagnose later</p>
+<p>Having models that sometimes error are a living nightmare, using <code>safely()</code> lets to run everything and diagnose later</p>
 <p><br></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>results <span class="ot">&lt;-</span> <span class="fu">map</span>(configs, <span class="fu">safely</span>(run_model), <span class="at">.progress =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><br></p>
-<p>Web scraping typically cals for delays between fetching, we handle this with <code>slowly()</code></p>
+<p>Web scraping typically calls for delays between fetching, we handle this with <code>slowly()</code></p>
 <p><br></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>scraped_ids <span class="ot">&lt;-</span> <span class="fu">map_chr</span>(urls, <span class="fu">slowly</span>(scrape_url), <span class="at">.progress =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>

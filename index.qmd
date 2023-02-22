@@ -274,7 +274,7 @@ map([\<vector\>]{.background-orange}, [\<function\>]{.background-pink}, [\<argum
 ::: {.column width="45%"}
 ::: fragment
 ```{r}
-map(mtcars, mean, rm.na = TRUE)
+map(mtcars, mean, na.rm = TRUE)
 ```
 :::
 :::
@@ -282,7 +282,7 @@ map(mtcars, mean, rm.na = TRUE)
 ::: {.column width="55%"}
 ::: fragment
 ```{r}
-map(mtcars, \(x) mean(x, rm.na = TRUE))
+map(mtcars, \(x) mean(x, na.rm = TRUE))
 ```
 :::
 :::
@@ -298,7 +298,7 @@ map(mtcars, \(x) mean(x, rm.na = TRUE))
 
 Using a `map()` is very close similar to using a `for`-loop and `lapply()`
 
-These two statements ar almost identical
+These two statements are almost identical
 
 <br>
 
@@ -632,7 +632,7 @@ Great at the end of long chain of pipes
 
 ## Function modifiers
 
-Having models that sometimes errors are a living nightmare, using `safely()` lets to run everything and diagnose later
+Having models that sometimes error are a living nightmare, using `safely()` lets to run everything and diagnose later
 
 <br>
 
@@ -643,7 +643,7 @@ results <- map(configs, safely(run_model), .progress = TRUE)
 
 <br>
 
-Web scraping typically cals for delays between fetching, we handle this with `slowly()`
+Web scraping typically calls for delays between fetching, we handle this with `slowly()`
 
 <br>
 
