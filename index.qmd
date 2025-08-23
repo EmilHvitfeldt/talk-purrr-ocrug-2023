@@ -7,6 +7,7 @@ format:
 knitr:
   opts_chunk: 
     echo: true
+pagetitle: Have a purrr-tastic time
 ---
 
 ##  {.theme-title background-image="assets/full.svg" background-size="cover"}
